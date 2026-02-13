@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form 4 Physics Quiz - Force & Motion I</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Form 4 Physics Quiz</h1>
+        <p>Topic: Force &amp; Motion I</p>
+      </header>
+
+      <section class="card" id="auth-card">
+        <h2>Login</h2>
+        <div class="grid-two">
+          <label>
+            Student Name
+            <input type="text" id="student-name" placeholder="e.g. Aisha" />
+          </label>
+          <label>
+            Student Class
+            <input type="text" id="student-class" placeholder="e.g. 4 Science" />
+          </label>
+        </div>
+        <label>
+          Email
+          <input type="email" id="email" placeholder="student@email.com" />
+        </label>
+        <label>
+          Password
+          <input type="password" id="password" placeholder="••••••••" />
+        </label>
+        <div class="row">
+          <button id="login-btn">Login</button>
+          <button id="signup-btn" class="secondary">Create Account</button>
+          <button id="logout-btn" class="secondary hidden">Logout</button>
+        </div>
+        <p class="status" id="auth-status">Please login to start the quiz.</p>
+      </section>
+
+      <section class="card hidden" id="quiz-card">
+        <div class="row between">
+          <h2>Quiz Questions</h2>
+          <span id="user-chip"></span>
+        </div>
+        <form id="quiz-form"></form>
+        <div class="row">
+          <button id="submit-quiz-btn" type="button">Submit Quiz</button>
+          <button id="export-csv-btn" class="secondary" type="button">Export My Attempts CSV</button>
+        </div>
+        <div id="result-box" class="result hidden"></div>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
